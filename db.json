@@ -1,0 +1,47 @@
+{
+    "bg": "https://user-images.githubusercontent.com/69087159/105875366-7a0c4380-5fdc-11eb-96e2-c9684ba11220.jpeg",
+    "logo": "https://seeklogo.com/images/C/cavaleiros-do-zodiaco-logo-7BEBD54081-seeklogo.com.png",
+    "title": "Quiz CSS da Alura",
+    "description": "Teste os seus conhecimentos sobre CSS e vamos ver quantos layouts você vai deixar de quebrar",
+    "questions": [
+      {
+        "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
+        "title": "Como fazer um seletor por id via CSS?",
+        "description": "Essa é pra aquecer",
+        "answer": 2,
+        "alternatives": [
+          ".elemento",
+          "*elemento",
+          "#elemento",
+          "%elemento"
+        ]
+      },
+      {
+        "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
+        "title": "Como fazer um background gradiente com css?",
+        "description": "Faz tempo em haha",
+        "answer": 0,
+        "alternatives": [
+           "background: linear-gradient(#e66465, #9198e5);",
+           "background: gradient(#e66465, #9198e5);"
+        ]
+      }
+    ],
+    "external": [
+      ""
+    ],
+    "theme": {
+      "colors": {
+        "primary": "#2196f3",
+        "secondary": "#f50057",
+        "mainBg": "#171B35",
+        "widgetBg": "#222222",
+        "contrastText": "#FFFFFF",
+        "wrong": "#dd2c00",
+        "success": "#4CAF50",
+        "gold": "#FED636",
+        "oldGold": "#FD8A02"
+      },
+      "borderRadius": "4px"
+    }
+  }
