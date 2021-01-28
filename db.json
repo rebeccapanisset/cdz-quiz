@@ -34,13 +34,14 @@
       "colors": {
         "primary": "#2196f3",
         "secondary": "#f50057",
-        "mainBg": "#171B35",
-        "widgetBg": "#222222",
-        "contrastText": "#FFFFFF",
         "wrong": "#dd2c00",
         "success": "#4CAF50",
+        "gray": "#95979b",
         "gold": "#FED636",
-        "oldGold": "#FD8A02"
+        "oldGold": "#FD8A02",
+        "contrastText": "#FFFFFF",
+        "mainBg": "#171B35",
+        "widgetBg": "#222222"
       },
       "borderRadius": "4px"
     }
