@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { Form } from '@unform/web';
 
 import Button from '../src/components/Button';
 import Footer from '../src/components/Footer';
@@ -8,95 +7,13 @@ import Input from '../src/components/Input';
 import QuizBackground from '../src/components/QuizBackground';
 import QuizContainer from '../src/components/QuizContainer';
 import QuizLogo from '../src/components/QuizLogo';
+import RadioInput from '../src/components/RadioInput';
 import Widget from '../src/components/Widget';
+import LoadingWidget from '../src/components/Widget/LoadingWidget';
+import ResultWidget from '../src/components/Widget/ResultWidget';
+import QuestionWidget from '../src/components/Widget/QuestionWidget';
 
 import db from '../db.json';
-
-function LoadingWidget() {
-    return (
-        <Widget>
-            <Widget.Header>
-                <h3>
-                    Carregando...
-                </h3>
-            </Widget.Header>
-            <Widget.Content>
-                [Desafio do Loading]
-            </Widget.Content>
-        </Widget>
-    );
-}
-
-function ResultWidget() {
-    return (
-        <Widget>
-            <Widget.Header>
-                <h3>
-                    Parabéns!!!
-                </h3>
-            </Widget.Header>
-            <Widget.Content>
-                Você acertou X de X perguntas!!!
-            </Widget.Content>
-        </Widget>
-    );
-}
-
-function QuestionWidget({ onSubmit, question, questionIndex, questionsLength }) {
-    const formRef = useRef(null);
-    
-    const questionId = `question_${questionIndex}`;
-
-    return (
-        <Widget>
-            <Widget.Header>
-                {/* <BackLinkArrow href="/" /> */}
-                <h3>
-                    {`Pergunta ${questionIndex + 1} de ${questionsLength}`}
-                </h3>
-            </Widget.Header>
-            <img
-                alt="Descrição"
-                style={{
-                    width: '100%',
-                    height: '150px',
-                    objectFit: 'cover',
-                }}
-                src={question.image}
-            />
-            <Widget.Content>
-                <h2>
-                    {question.title}
-                </h2>
-                <p>
-                    {question.description}
-                </p>
-
-                <Form ref={formRef} onSubmit={onSubmit}>
-                    {question.alternatives.map((alternative, index) => {
-                        const alternativeId = `alternative_${index}`;
-
-                        return (
-                            <Widget.Topic as="label" htmlFor={alternativeId}>
-                                <input 
-                                    id={alternativeId} 
-                                    name={questionId} 
-                                    style={{ display: 'none' }} 
-                                    type="radio"
-                                />
-                                {alternative}
-                            </Widget.Topic>
-                        );
-                    })}
-
-                    <Button color="gold" type="submit">
-                        Confirmar
-                    </Button>
-                </Form>
-            </Widget.Content>
-        </Widget>
-    );
-}
 
 const screenStates = {
     QUIZ: 'QUIZ',
@@ -107,11 +24,19 @@ const screenStates = {
 export default function Quiz() {
     const [screenState, setScreenState] = useState(screenStates.LOADING);
 
-    const questionsLength = db.questions.length;
     const [questionIndex, setQuestionIndex] = useState(0);
+    const [results, setResults] = useState([]);
+
+    const questionsLength = db.questions.length;
     const question = db.questions[questionIndex];
 
-    function handleSubmit() {
+    function addResult(result) {
+        setResults([...results, result]);
+    }
+
+    function handleSubmit(data) {
+        console.log(data);
+
         const nextQuestion = questionIndex + 1;
 
         if (nextQuestion < questionsLength) {
@@ -142,10 +67,12 @@ export default function Quiz() {
                         questionIndex={questionIndex} 
                         questionsLength={questionsLength} 
                         onSubmit={handleSubmit}
+                        addResult={addResult}
                     />
                 )}
                 {screenState === screenStates.LOADING && <LoadingWidget />}
-                {screenState === screenStates.RESULT && <ResultWidget />}
+                {screenState === screenStates.RESULT && 
+                    <ResultWidget results={results} total={questionsLength} />}
                 <Footer />
             </QuizContainer>
             <GitHubCorner projectUrl="https://github.com/omariosouto" />
