@@ -1,8 +1,8 @@
 import styled, { css } from 'styled-components';
 
-import db from '../../../db.json';
+import { theme } from '../../../db.json';
 
-const color = db.theme.colors;
+const color = theme.colors;
 
 export const Container = styled.div`
     position: relative;

@@ -5,25 +5,111 @@
     "description": "Teste os seus conhecimentos sobre CSS e vamos ver quantos layouts você vai deixar de quebrar",
     "questions": [
       {
-        "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
-        "title": "Como fazer um seletor por id via CSS?",
-        "description": "Essa é pra aquecer",
+        "image": "https://user-images.githubusercontent.com/69087159/106370452-e7033e80-6338-11eb-8251-3cf4d55043d6.png",
+        "title": "Qual o nome original de 'Os Cavaleiros do Zodíaco'?",
+        "description": "...essa é bem fácil!",
         "answer": 2,
         "alternatives": [
-          ".elemento",
-          "*elemento",
-          "#elemento",
-          "%elemento"
+          "Pegasus Ryu Sei Ken",
+          "Os Guardioes do Universo",
+          "Sain Seiya",
+          "Os Cavaleiros do Zodíaco"
         ]
       },
       {
-        "image": "https://media.giphy.com/media/13FrpeVH09Zrb2/giphy.gif",
-        "title": "Como fazer um background gradiente com css?",
-        "description": "Faz tempo em haha",
+        "image": "",
+        "title": "Quem criou 'Os Cavaleiros do Zodíaco'?",
+        "description": "",
+        "answer": 1,
+        "alternatives": [
+           "Yoshihiro Togashi",
+           "Masami Kurumada",
+           "Eiichiro Oda",
+           "Akira Toriyama"
+        ]
+      },
+      {
+        "image": "",
+        "title": "Quem matou o mestre de Shun de Andrômeda?",
+        "description": "",
+        "answer": 3,
+        "alternatives": [
+           "Hakurei de Altar",
+           "Saga de Gêmeos",
+           "Mascara da Morte de Câncer",
+           "Afrodite de Peixes"
+        ]
+      },
+      {
+        "image": "",
+        "title": "Quais são os cavaleiros de ouro mais velhos?",
+        "description": "...sem contar com o Dohko de Libra :)",
+        "answer": 1,
+        "alternatives": [
+           "Shaka de Virgem e Mu de Áries",
+           "Aiolos de Sargitário e Saga/Kanon de Gêmeos",
+           "Camus de Aquário e Milo de Escorpião",
+           "Aldebaran de Touro e Shura de Capricórnio"
+        ]
+      },
+      {
+        "image": "",
+        "title": "Qual spin-off conta a história da Gerra Santa anterior?",
+        "description": "",
         "answer": 0,
         "alternatives": [
-           "background: linear-gradient(#e66465, #9198e5);",
-           "background: gradient(#e66465, #9198e5);"
+           "The Lost Canvas",
+           "Os Cavaleiros do Zodíaco Ômega",
+           "Os Cavaleiros do Zodíaco: Episódio G",
+           "Os Cavaleiros do Zodíaco: Saintia Shô"
+        ]
+      },
+      {
+        "image": "",
+        "title": "Quantos anos Ikki tem?",
+        "description": "",
+        "answer": 1,
+        "alternatives": [
+          "17",
+          "15",
+          "19",
+          "21"
+        ]
+      },
+      {
+        "image": "",
+        "title": "Qual o país de origem de Hyoga?",
+        "description": "",
+        "answer": 3,
+        "alternatives": [
+           "Itália",
+           "Alemanha",
+           "Estados Unidos",
+           "Russia"
+        ]
+      },
+      {
+        "image": "",
+        "title": "Em que ano se passa 'Next Dimension'?",
+        "description": "",
+        "answer": 2,
+        "alternatives": [
+           "1986",
+           "2004",
+           "1990",
+           "2000"
+        ]
+      },
+      {
+        "image": "",
+        "title": "Quais foram os locais de treinamento e nascimento de Shiriu de Dragão?",
+        "description": "",
+        "answer": 0,
+        "alternatives": [
+           "Nascido no Japão e treinado na China",
+           "Nascido e treinado na China",
+           "Nascido na China e treinado no Japão",
+           "Nascido e treinado no Japão"
         ]
       }
     ],
