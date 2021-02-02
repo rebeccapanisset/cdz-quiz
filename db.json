@@ -1,11 +1,11 @@
 {
     "bg": "https://user-images.githubusercontent.com/69087159/105875366-7a0c4380-5fdc-11eb-96e2-c9684ba11220.jpeg",
     "logo": "https://seeklogo.com/images/C/cavaleiros-do-zodiaco-logo-7BEBD54081-seeklogo.com.png",
-    "title": "Quiz CSS da Alura",
-    "description": "Teste os seus conhecimentos sobre CSS e vamos ver quantos layouts você vai deixar de quebrar",
+    "title": "Quiz CDZ da Alura",
+    "description": "Teste os seus conhecimentos sobre Os Cavaleiros do Zodíaco e vamos ver o quanto você consegue elevar seu cosmo.",
     "questions": [
       {
-        "image": "https://user-images.githubusercontent.com/69087159/106370452-e7033e80-6338-11eb-8251-3cf4d55043d6.png",
+        "image": "https://user-images.githubusercontent.com/69087159/106617016-f5c23f00-654c-11eb-8e81-a62719e2d9e7.gif",
         "title": "Qual o nome original de 'Os Cavaleiros do Zodíaco'?",
         "description": "...essa é bem fácil!",
         "answer": 2,
@@ -17,9 +17,9 @@
         ]
       },
       {
-        "image": "",
+        "image": "https://i.pinimg.com/originals/0a/2b/80/0a2b806580a1f8e13bf75e96aded066e.gif",
         "title": "Quem criou 'Os Cavaleiros do Zodíaco'?",
-        "description": "",
+        "description": "Um mestre...",
         "answer": 1,
         "alternatives": [
            "Yoshihiro Togashi",
@@ -29,7 +29,7 @@
         ]
       },
       {
-        "image": "",
+        "image": "https://i.pinimg.com/originals/f4/e0/d1/f4e0d121a5eab8cdda3612b0785e9766.gif",
         "title": "Quem matou o mestre de Shun de Andrômeda?",
         "description": "",
         "answer": 3,
@@ -41,7 +41,7 @@
         ]
       },
       {
-        "image": "",
+        "image": "https://pa1.narvii.com/6258/8507fda47967069ef2406a5eb23a0b04c543f182_hq.gif",
         "title": "Quais são os cavaleiros de ouro mais velhos?",
         "description": "...sem contar com o Dohko de Libra :)",
         "answer": 1,
@@ -53,7 +53,7 @@
         ]
       },
       {
-        "image": "",
+        "image": "https://thumbs.gfycat.com/FlippantNaughtyBluetonguelizard-max-1mb.gif",
         "title": "Qual spin-off conta a história da Gerra Santa anterior?",
         "description": "",
         "answer": 0,
@@ -65,7 +65,7 @@
         ]
       },
       {
-        "image": "",
+        "image": "https://leitorcabuloso.com.br/wp-content/uploads/2015/12/ikki-f%C3%AAnix.gif",
         "title": "Quantos anos Ikki tem?",
         "description": "",
         "answer": 1,
@@ -77,7 +77,7 @@
         ]
       },
       {
-        "image": "",
+        "image": "https://i.pinimg.com/originals/9b/c4/bf/9bc4bfb5b23fb31e45c295bc7514b685.gif",
         "title": "Qual o país de origem de Hyoga?",
         "description": "",
         "answer": 3,
@@ -89,7 +89,7 @@
         ]
       },
       {
-        "image": "",
+        "image": "http://pa1.narvii.com/6495/61f197baac5e9a936768e141468a942e86b3bf44_00.gif",
         "title": "Em que ano se passa 'Next Dimension'?",
         "description": "",
         "answer": 2,
@@ -101,9 +101,9 @@
         ]
       },
       {
-        "image": "",
+        "image": "http://pa1.narvii.com/6360/6584aac8333dfa54a5e5721e1cd018d2feefe043_00.gif",
         "title": "Quais foram os locais de treinamento e nascimento de Shiriu de Dragão?",
-        "description": "",
+        "description": "Cuidado para não confundir hehe...",
         "answer": 0,
         "alternatives": [
            "Nascido no Japão e treinado na China",
@@ -114,20 +114,21 @@
       }
     ],
     "external": [
-      ""
+      "http://aluraquiz-css.omariosouto.vercel.app/",
+      "http://aluraquiz-marvel.omariosouto.vercel.app/"
     ],
     "theme": {
       "colors": {
-        "primary": "#2196f3",
-        "secondary": "#f50057",
+        "primary": "#1565c0",
+        "secondary": "#fbc02d",
         "wrong": "#dd2c00",
         "success": "#4CAF50",
         "gray": "#95979b",
         "gold": "#FED636",
         "oldGold": "#FD8A02",
         "contrastText": "#FFFFFF",
-        "mainBg": "#171B35",
-        "widgetBg": "#222222"
+        "blackText": "#222222",
+        "mainBg": "#222222"
       },
       "borderRadius": "4px"
     }

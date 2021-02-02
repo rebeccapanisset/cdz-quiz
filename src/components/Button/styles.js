@@ -1,9 +1,5 @@
 import styled from 'styled-components';
 
-import { theme } from '../../../db.json';
-
-const color = theme.colors;
-
 export const Container = styled.div`
     display: flex;
 
@@ -11,8 +7,10 @@ export const Container = styled.div`
         border: none;
         border-radius: 4px;
 
-        background: ${(props) => props.color};
-        /* color: ${color.black} */
+        background: ${({ theme }) => theme.colors.secondary};
+        color: ${({ color, theme }) => { 
+            return color ? color : theme.colors.contrastText;
+        }};
 
         align-items: center;
         display: flex;

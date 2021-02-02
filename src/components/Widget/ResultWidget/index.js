@@ -1,16 +1,21 @@
 import React from 'react';
 
+import BackLinkArrow from '../../BackLinkArrow'
 import Widget from '../../Widget';
 
-export default function ResultWidget({ results, total }) {
+export default function ResultWidget({ results, total, ...rest }) {
     const avg = total / 2; //averange
     // const result = results.reduce((sum, res) => res ? sum + 1 : sum, 0);
     const result = results.filter((res) => res).length;
 
+    const resto = { ...rest };
+
+    console.log('resto: ', resto);
 
     return (
         <Widget>
             <Widget.Header>
+                <BackLinkArrow href="/" />
                 <h3>
                     {result > avg ? 'Parabéns!!!' : 'Sinto Muito...'}
                 </h3>

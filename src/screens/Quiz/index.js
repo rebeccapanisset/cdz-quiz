@@ -1,19 +1,13 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useState } from 'react';
 
-import Button from '../src/components/Button';
-import Footer from '../src/components/Footer';
-import GitHubCorner from '../src/components/GitHubCorner';
-import Input from '../src/components/Input';
-import QuizBackground from '../src/components/QuizBackground';
-import QuizContainer from '../src/components/QuizContainer';
-import QuizLogo from '../src/components/QuizLogo';
-import RadioInput from '../src/components/RadioInput';
-import Widget from '../src/components/Widget';
-import LoadingWidget from '../src/components/Widget/LoadingWidget';
-import ResultWidget from '../src/components/Widget/ResultWidget';
-import QuestionWidget from '../src/components/Widget/QuestionWidget';
-
-import db from '../db.json';
+import Footer from '../../components/Footer';
+import GitHubCorner from '../../components/GitHubCorner';
+import QuizBackground from '../../components/QuizBackground';
+import QuizContainer from '../../components/QuizContainer';
+import QuizLogo from '../../components/QuizLogo';
+import LoadingWidget from '../../components/Widget/LoadingWidget';
+import ResultWidget from '../../components/Widget/ResultWidget';
+import QuestionWidget from '../../components/Widget/QuestionWidget';
 
 const screenStates = {
     QUIZ: 'QUIZ',
@@ -21,14 +15,14 @@ const screenStates = {
     RESULT: 'RESULT',
 };
 
-export default function Quiz() {
+export default function Quiz({ background, questions }) {
     const [screenState, setScreenState] = useState(screenStates.LOADING);
 
     const [questionIndex, setQuestionIndex] = useState(0);
     const [results, setResults] = useState([]);
 
-    const questionsLength = db.questions.length;
-    const question = db.questions[questionIndex];
+    const questionsLength = questions.length;
+    const question = questions[questionIndex];
 
     function addResult(result) {
         setResults([...results, result]);
@@ -58,7 +52,7 @@ export default function Quiz() {
     }, []);
 
     return (
-        <QuizBackground backgroundImage={db.bg}>
+        <QuizBackground backgroundImage={background}>
             <QuizContainer>
                 <QuizLogo />
                 {screenState === screenStates.QUIZ && (

@@ -1,14 +1,10 @@
 import styled, { css } from 'styled-components';
 
-import { theme } from '../../../db.json';
-
-const color = theme.colors;
-
 export const Container = styled.div`
     position: relative;
     display: flex;
 
-    border: 1px solid ${color.gray};
+    border: 1px solid ${({ theme }) => theme.colors.gray};
     border-radius: 4px;
 
     margin-bottom: 25px;
@@ -16,7 +12,7 @@ export const Container = styled.div`
     /* ${(props) => 
         props.isFocused &&
         css`
-            border: 1px solid ${color.gold};
+            border: 1px solid ${({ theme }) => theme.colors.secondary};
         `
     } */
 
@@ -24,7 +20,7 @@ export const Container = styled.div`
         background: transparent;
         border: none;
         border-radius: 4px;
-        color: ${color.contrastText};
+        color: ${({ theme }) => theme.colors.contrastText};
         padding: 8px 0 8px 8px;
         flex: 1;
     }

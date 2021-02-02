@@ -1,7 +1,7 @@
 import styled from 'styled-components';
 import db from '../../../db.json';
 
-export const Topic = styled.a`
+export const Option = styled.label`
   outline: 0;
   text-decoration: none;
   color: ${({ theme }) => theme.colors.contrastText};

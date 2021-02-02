@@ -1,14 +1,11 @@
 import styled from 'styled-components';
 import db from '../../../db.json';
 
-const theme = db.theme;
-const color = db.theme.colors;
-
 const Widget = styled.div`
   margin-top: 24px;
   margin-bottom: 24px;
-  border: 1px solid ${color.gold};
-  background-color: ${color.widgetBg};
+  border: 1px solid ${({ theme }) => theme.colors.secondary};
+  background-color: ${({ theme }) => theme.colors.mainBg};
   border-radius: 4px;
   overflow: hidden;
 
@@ -31,7 +28,7 @@ Widget.Header = styled.header`
   justify-content: flex-start;
   align-items: center;
   padding: 18px 32px;
-  background: linear-gradient(#FD8A02, #FED636, #FD8A02);
+  background: ${({ theme }) => theme.colors.secondary};
   
   * {
     margin: 0;
@@ -39,7 +36,7 @@ Widget.Header = styled.header`
   
   h1, h2, h3 {
     font-size: 23px;
-    background: -webkit-linear-gradient(#2196f3, #8cc9f7, #2196f3);
+    background: ${({ theme }) => theme.colors.primary};
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
 
@@ -58,6 +55,25 @@ Widget.Content = styled.div`
     list-style: none;
     padding: 0;
   }
+`;
+
+Widget.Topic = styled.a`
+  outline: 0;
+  text-decoration: none;
+  color: ${({ theme }) => theme.colors.contrastText};
+  background-color: ${({ theme }) => theme.colors.primary};
+  padding: 10px 15px;
+  margin-bottom: 8px;
+  cursor: pointer;
+  border-radius: ${({ theme }) => theme.borderRadius};
+  transition: .3s;
+  display: block;
+
+  &:hover,
+  &:focus {
+    opacity: .5;
+  }
+
 `;
 
 export default Widget;

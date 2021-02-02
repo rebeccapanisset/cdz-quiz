@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { Form } from '@unform/web';
 
+import BackLinkArrow from '../../BackLinkArrow';
 import Button from '../../Button';
 import RadioInput from '../../RadioInput';
 import Widget from '../../Widget';
@@ -52,7 +53,7 @@ export default function QuestionWidget({
     return (
         <Widget>
             <Widget.Header>
-                {/* <BackLinkArrow href="/" /> */}
+                <BackLinkArrow href="/" />
                 <h3>
                     {`Pergunta ${questionIndex + 1} de ${questionsLength}`}
                 </h3>
@@ -83,7 +84,7 @@ export default function QuestionWidget({
                         isCorrect={isCorrect}
                     />
                     <Button 
-                        color="gold" 
+                        color="blackText" 
                         disabled={!hasSelectedAlternative}
                         type="submit" 
                     >

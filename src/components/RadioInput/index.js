@@ -1,7 +1,7 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { useField } from '@unform/core';
 
-import { Topic } from './styles';
+import { Option } from './styles';
 
 export default function RadioInput({ 
 	isCorrect, 
@@ -39,8 +39,7 @@ export default function RadioInput({
     return (
 		<div>
 			{options.map((option, index) => (
-				<Topic 
-					as="label" 
+				<Option 
 					htmlFor={option.id} 
 					key={option.id}
 					data-selected={selected === option.id}
@@ -56,7 +55,7 @@ export default function RadioInput({
 						{...rest}
 					/>
 					<span>{option.label}</span>
-				</Topic>
+				</Option>
 			))}
 		</div>
     );
